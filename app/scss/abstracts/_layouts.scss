@@ -1,0 +1,21 @@
+@use 'variables/sizes';
+
+.wrapper {
+    width: Min(100vw, sizes.$wrapper-width);
+}
+
+.container {
+    min-height: 100vh;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[data-page] {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

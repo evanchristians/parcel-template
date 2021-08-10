@@ -1,0 +1,27 @@
+@use "variables/colors";
+
+a {
+    color: colors.$primary;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &::after {
+        content: "";
+        background-color: colors.$primary;
+        height: 1px;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms easeInOutQuad;
+    }
+
+    &.active::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
