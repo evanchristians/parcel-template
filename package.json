@@ -1,23 +1,28 @@
 {
-  "name": "dom-manipulation-demo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "dev": "gulp sass:watch",
-    "build": "gulp sass:build"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.3.1",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "node-sass": "^6.0.1",
-    "postcss-easings": "^3.0.1",
-    "sass": "^1.37.5",
-    "tailwindcss": "^2.2.7"
-  }
+    "name": "dom-manipulation-demo",
+    "version": "1.0.0",
+    "license": "MIT",
+    "targets": {
+        "app": {
+            "distDir": "./assets"
+        }
+    },
+    "scripts": {
+        "dev:shopify": "parcel src/index.js src/styles/main.scss src/styles/vendor/**/*.css --dist-dir assets",
+        "build:shopify": "parcel build src/index.js src/styles/main.scss src/styles/vendor/**/*.css --dist-dir assets",
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "2.0.0-rc.0",
+        "autoprefixer": "^10.3.1",
+        "parcel": "^2.0.0-rc.0",
+        "postcss-easings": "^3.0.1",
+        "posthtml-doctype": "^1.1.1",
+        "posthtml-include": "^1.7.1",
+        "tailwindcss": "^2.2.7"
+    },
+    "dependencies": {
+        "locomotive-scroll": "^4.1.1"
+    }
 }

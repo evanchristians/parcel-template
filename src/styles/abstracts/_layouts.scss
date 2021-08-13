@@ -1,7 +1,7 @@
 @use 'variables/sizes';
 
 .wrapper {
-    width: Min(100vw, sizes.$wrapper-width);
+    width: Min(calc(100vw - 3rem), sizes.$wrapper-width);
 }
 
 .container {
@@ -12,10 +12,19 @@
     align-items: center;
 }
 
+main {
+    flex-grow: 1;
+}
+
 [data-page] {
     display: none;
 
     &.active {
         display: block;
     }
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
 }

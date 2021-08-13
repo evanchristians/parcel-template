@@ -1,0 +1,6 @@
+@use "variables/fonts";
+
+body {
+    font-family: fonts.$body;
+    font-size: 15px;
+}

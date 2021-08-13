@@ -1,0 +1,51 @@
+<form
+    id="contact-form"
+    class="flex flex-col gap-2 items-center max-w-md mx-auto"
+>
+    <div class="grid grid-cols-2 w-full gap-5">
+        <input-group class="flex gap-2 flex-col w-full">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="bg-gray-200 p-2" />
+            <p class="field-error" id="name-error"></p>
+        </input-group>
+
+        <input-group class="flex gap-2 flex-col w-full">
+            <label for="email">Email</label>
+            <input
+                type="text"
+                name="email"
+                id="email"
+                class="bg-gray-200 p-2"
+            />
+            <p class="field-error" id="email-error"></p>
+        </input-group>
+    </div>
+
+    <input-group class="flex gap-2 flex-col w-full">
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" id="phone" class="bg-gray-200 p-2" />
+        <p class="field-error" id="phone-error"></p>
+    </input-group>
+
+    <input-group class="flex gap-2 flex-col w-full">
+        <label for="message">Message</label>
+        <textarea
+            name="message"
+            id="message"
+            rows="4"
+            value=""
+            class="bg-gray-200 p-2"
+        ></textarea>
+    </input-group>
+    <p class="field-error mt-1 mr-auto" id="message-error"></p>
+
+    <button
+        type="submit"
+        id="contact-form-submit-button"
+        class="btn bg-blue-500 text-white py-2 px-6 text-lg"
+    >
+        Send
+    </button>
+
+    <p class="text-green-600" id="form-success"></p>
+</form>

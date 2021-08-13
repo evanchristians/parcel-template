@@ -1,0 +1,40 @@
+h1 {
+    font-size: clamp(36px, 6vw, 72px);
+
+    line-height: 1;
+    opacity: 0;
+    transform: translateX(1rem);
+    transition: transform 1s easeOutQuint 0.2s, opacity 1s easeOutQuint 0.2s;
+
+    &.is-intersecting {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 42px);
+
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform 1s easeOutQuint 0.2s, opacity 1s easeOutQuint 0.2s;
+
+    &.is-intersecting {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+p[data-scroll] {
+    opacity: 0;
+    transform: translateY(0.25rem);
+    transition: transform 1s easeOutQuint 0.3s, opacity 1s easeOutQuint 0.3s;
+    vertical-align: top;
+    line-height: 2;
+
+    &.is-intersecting {
+        transform: none;
+        opacity: 1;
+    }
+}
