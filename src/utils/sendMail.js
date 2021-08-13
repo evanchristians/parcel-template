@@ -1,3 +1,5 @@
+import { ADMIN_EMAIL } from "./constants";
+
 export const sendMail = async (props) => {
     try {
         const response = await fetch(

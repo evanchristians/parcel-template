@@ -16,98 +16,11 @@
     </head>
 
     <body class="container bg-gray-50">
-        <header class="w-full mb-20">
-            <div class="wrapper flex mx-auto">
-                <nav class="py-5 flex ml-auto w-full">
-                    <h3 class="mr-auto font-bold logo">HelloWorld</h3>
-
-                    <ul class="flex">
-                        <li>
-                            <a
-                                href="#"
-                                data-page-link
-                                data-target="home"
-                                class="active"
-                                >home</a
-                            >
-                        </li>
-
-                        <li>
-                            <a href="#" data-page-link data-target="about"
-                                >about</a
-                            >
-                        </li>
-
-                        <li>
-                            <a href="#" data-page-link data-target="contact"
-                                >contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main data-scroll data-page id="home" class="wrapper active">
-            <div class="grid grid-cols-2 gap-10">
-                <div>
-                    <h1 data-scroll class="my-5 font-bold">
-                        <span class="text-blue-600">Hello World!</span><br />
-                    </h1>
-
-                    <h2 data-scroll>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ut, iusto.
-                    </h2>
-                </div>
-                <div data-scroll fade-in class="mt-10">
-                    <h3 class="text-center mb-5 text-lg">
-                        Have a question? Contact us!
-                    </h3>
-
-                    <include src="src/components/contact-form.html"></include>
-                </div>
-            </div>
-        </main>
-
-        <main data-page id="about" class="wrapper">
-            <h1 data-scroll class="my-5 font-bold">About Us</h1>
-
-            <p data-scroll class="max-w-lg">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                nam consectetur, quae laudantium perspiciatis dolore temporibus
-                odit incidunt tempora repudiandae voluptatem fugiat eius
-                inventore possimus aut numquam quos! Natus, reprehenderit?
-            </p>
-        </main>
-
-        <main data-page id="contact" class="wrapper">
-            <div class="grid grid-cols-2 gap-10">
-                <div>
-                    <h2 data-scroll class="my-5 font-bold">Say Hi</h2>
-
-                    <p data-scroll class="max-w-lg">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Culpa nam consectetur, quae laudantium
-                        perspiciatis dolore temporibus odit incidunt tempora
-                        repudiandae voluptatem fugiat eius inventore possimus
-                        aut numquam quos! Natus, reprehenderit?
-                    </p>
-                </div>
-
-                <div data-scroll fade-in class="mt-10">
-                    <h3 class="text-center mb-5 text-lg">
-                        Have a question? Contact us!
-                    </h3>
-
-                    <include src="src/components/contact-form.html"></include>
-                </div>
-            </div>
-        </main>
-
-        <footer class="py-5 bg-blue-600 w-full text-white text-center">
-            <p class="">&copy; Evan Christians &middot; 2021</p>
-        </footer>
+        <include src="src/components/header.html"></include>
+        <include src="src/pages/home.html"></include>
+        <include src="src/pages/about.html"></include>
+        <include src="src/pages/contact.html"></include>
+        <include src="src/components/footer.html"></include>
         <script type="module" src="index.js"></script>
     </body>
 </html>

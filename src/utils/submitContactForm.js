@@ -1,5 +1,3 @@
-const { ADMIN_EMAIL } = require("./constants");
-
 const validate = (formProps) => {
     let errors = [];
 
