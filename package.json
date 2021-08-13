@@ -9,7 +9,7 @@
     },
     "scripts": {
         "dev": "parcel src/index.html",
-        "build:gh-pages": "parcel build src/index.html --public-url /parcel2-template/"
+        "build:gh-pages": "parcel build src/index.html --public-url /parcel-template/"
     },
     "devDependencies": {
         "@parcel/transformer-sass": "2.0.0-rc.0",
