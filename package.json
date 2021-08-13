@@ -4,14 +4,12 @@
     "license": "MIT",
     "targets": {
         "app": {
-            "distDir": "./assets"
+            "distDir": "./docs"
         }
     },
     "scripts": {
-        "dev:shopify": "parcel src/index.js src/styles/main.scss src/styles/vendor/**/*.css --dist-dir assets",
-        "build:shopify": "parcel build src/index.js src/styles/main.scss src/styles/vendor/**/*.css --dist-dir assets",
         "dev": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "build:gh-pages": "parcel build src/index.html --public-url /parcel2-template/"
     },
     "devDependencies": {
         "@parcel/transformer-sass": "2.0.0-rc.0",
