@@ -10,7 +10,13 @@ export const usePrimitiveSPRouter = () => {
                 pageLink.classList.remove("active")
             );
 
-            pageLink.classList.add("active");
+            const targetLinks = document.querySelectorAll(
+                `[data-target='${pageLink.dataset.target}']`
+            );
+
+            targetLinks.forEach((targetLink) => {
+                targetLink.classList.add("active");
+            });
 
             pages.forEach((page) => page.classList.remove("active"));
 

@@ -1,4 +1,4 @@
-@use 'variables/sizes';
+@use '../abstracts/sizes';
 
 .wrapper {
     width: Min(calc(100vw - 3rem), sizes.$wrapper-width);

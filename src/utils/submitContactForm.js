@@ -1,3 +1,5 @@
+import { sendMail } from "./sendMail";
+
 const validate = (formProps) => {
     let errors = [];
 
@@ -64,8 +66,7 @@ const clearErrors = (formProps) => {
     document.getElementById("form-success").innerText = "";
 };
 
-
-export const submitContactForm = (event) => {
+export const submitContactForm = async (event) => {
     event.preventDefault();
     const formData = new FormData(document.getElementById("contact-form"));
     const formProps = Object.fromEntries(formData);
@@ -88,9 +89,9 @@ export const submitContactForm = (event) => {
 
         submitButton.disabled = true;
 
-        const { success } = sendMail();
+        const mailResponse = await sendMail();
 
-        if (success) {
+        if (mailResponse.success) {
             submitButton.classList.add("success");
             submitButton.innerText = "Sent!";
             document.getElementById("form-success").innerText =
