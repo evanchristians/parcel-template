@@ -89,7 +89,7 @@ export const submitContactForm = async (event) => {
 
         submitButton.disabled = true;
 
-        const mailResponse = await sendMail();
+        const mailResponse = await sendMail(formProps);
 
         if (mailResponse.success) {
             submitButton.classList.add("success");
